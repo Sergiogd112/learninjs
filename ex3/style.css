@@ -1,0 +1,19 @@
+body{
+    background-color: aqua;
+    align-items: center;
+}
+h1{
+    font-family: sans-serif;
+
+}
+p{
+    font-family: sans-serif;
+}
+button{
+    background-color: blue;
+    font-style: normal;
+    font-family: sans-serif;
+    color: aliceblue;
+    border-radius: 10px;
+    border-style: none;
+}
