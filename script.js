@@ -31,8 +31,9 @@ function info(){
     document.getElementById('info').innerHTML=`El grup ${ImagineDragons.nom} és un grup de ${ImagineDragons.genre} i es va formar al país ${ImagineDragons.country}`;
 }
 function disco() {
-    document.getElementById('disco').innerHTML='La discografia del grup ${ImagineDragons.nom} és:\n<ul>';
-    myfunction3(ImagineDragons.discografia,'disco').then({
+    document.getElementById('disco').innerHTML='La discografia del grup Imagine Dragons és:\n<ul>\n';
+
+    myfunction3(ImagineDragons.discografia,'disco').then(data=>{
     myhtml=document.getElementById('disco').innerHTML;
     document.getElementById('disco').innerHTML=myhtml+'</ul>';
     });
