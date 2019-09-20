@@ -1,6 +1,8 @@
 body {
     background-color: aqua;
     align-items: center;
+    font-family: sans-serif;
+
 }
 
 h1 {
@@ -18,4 +20,5 @@ button {
     color: aliceblue;
     border-radius: 10px;
     border-style: none;
+    padding: 0.5%;
 }
