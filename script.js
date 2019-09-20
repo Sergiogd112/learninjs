@@ -6,10 +6,11 @@ function myfunction1() {
 }
 aficions = ['Programacio', 'Natacio', 'Series', 'Ciencia', 'IA']
 
-function myfunction3() {
-    aficions.forEach(function(element){
-        myhtml=document.getElementById('aficions').innerHTML;
-        document.getElementById('aficions').innerHTML=myhtml+'<li>'+element+'</li>\n';
+function myfunction3(array,id) {
+    console.log(array,id);
+    array.forEach(function(element){
+        myhtml=document.getElementById(id).innerHTML;
+        document.getElementById(id).innerHTML=myhtml+'<li>'+element+'</li>\n';
         console.log(myhtml)
 
     })
@@ -19,4 +20,20 @@ function myfunction2() {
     document.getElementById('nom').innerHTML='Sergio';
     document.getElementById('cnom').innerHTML='Gomez';
     document.getElementById('birthday').innerHTML='01/01/2002';
+}
+var ImagineDragons={
+    nom:'ImagineDragons',
+    genre:'rock',
+    country:'Canada',
+    discografia:['Night vision','Smoke+Mirrors','Evolve','Origins']
+}
+function info(){
+    document.getElementById('info').innerHTML=`El grup ${ImagineDragons.nom} és un grup de ${ImagineDragons.genre} i es va formar al país ${ImagineDragons.country}`;
+}
+function disco() {
+    document.getElementById('disco').innerHTML='La discografia del grup ${ImagineDragons.nom} és:\n<ul>';
+    myfunction3(ImagineDragons.discografia,'disco').then({
+    myhtml=document.getElementById('disco').innerHTML;
+    document.getElementById('disco').innerHTML=myhtml+'</ul>';
+    });
 }
